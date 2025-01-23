@@ -1,8 +1,0 @@
-# Ignore environment variables
-*.env
-
-# Ignore Node.js packages
-node_modules/
-
-# Ignore macOS .DS_Store files
-.DS_Store
