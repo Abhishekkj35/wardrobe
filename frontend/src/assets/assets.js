@@ -76,6 +76,7 @@ import cross_icon from './cross_icon.png'
 import banner1 from './banner-1.webp'
 import banner2 from './banner-2.webp'
 import banner3 from './banner-3.webp'
+import parcel_icon from './parcel_icon.svg'
 
 export const assets = {
     logo,
@@ -98,7 +99,8 @@ export const assets = {
     cross_icon,
     banner1,
     banner2,
-    banner3
+    banner3,
+    parcel_icon
 }
 
 export const products = [

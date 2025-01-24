@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
   
 
 export const backendUrl = 'https://wardrobe-backend-v3dw.onrender.com';
-export const currency = "$"
+export const currency = "₹"
 
 const App = () => {
   const [token, setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):'');

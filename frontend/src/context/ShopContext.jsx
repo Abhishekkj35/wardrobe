@@ -5,7 +5,7 @@ import axios from 'axios'
 export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
 
-    const currency = '$'
+    const currency = '₹'
     const delivery_fee = 10;
     const backendUrl='https://wardrobe-backend-v3dw.onrender.com'
     const [search, setSearch] = useState('');
