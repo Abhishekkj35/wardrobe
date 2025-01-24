@@ -8,20 +8,20 @@ const Login = ({setToken}) => {
   const [password, setPassword] = useState("")
   
     const onSubmitHandler = async (e) => {
-     try {
-       e.preventDefault();
-       const response = await axios.post(backendUrl+'/api/user/admin', { email, password })
-       if (response.data.success) {
-         setToken(response.data.token)
-       } else {
-         toast.error(response.data.message)
+      try {
+        e.preventDefault();
+        const response = await axios.post(backendUrl+'/api/user/admin', { email, password })
+        if (response.data.success) {
+          setToken(response.data.token)
+        } else {
+          toast.error(response.data.message)
+        }
+      } catch (error) {
+        toast.error(error.message)
       }
-     } catch (error) {
-      toast.error(error.message)
-     }
     }
   return (
-   
+  
       <div className='flex flex-col items-center py-10'>
             <h1 className='text-2xl font-bold mb-4'>Admin Panel</h1>   
             <form onSubmit={onSubmitHandler} className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800'>
@@ -33,7 +33,7 @@ const Login = ({setToken}) => {
       <button className='bg-black text-white font-light px-8 py-2 mt-4' >Login</button>
     </form> 
       </div>
-   
+  
   )
 }
 

@@ -14,7 +14,6 @@ const Add = ({token}) => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
-  const [stock, setStock] = useState('');
   const [category, setCategory] = useState('Men');
   const [subCategory, setSubCategory] = useState('Topwear');
   const [bestseller, setBestseller] = useState('');
@@ -28,7 +27,6 @@ const Add = ({token}) => {
       formData.append("name", name)
       formData.append("description", description)
       formData.append("price", price)
-      formData.append("stock", stock)
       formData.append("category", category)
       formData.append("subCategory", subCategory)
       formData.append("sizes", JSON.stringify(sizes))
@@ -47,12 +45,13 @@ const Add = ({token}) => {
         setDescription('')
         setCategory('Men')
         setSubCategory('Topwear')
-        setStock('')
         setImage1(false)
         setImage2(false)
         setImage3(false)
         setImage4(false)
         setPrice('')
+        setSizes([])
+        setBestseller('')
       } else {
         toast.error(response.data.message)
       }
@@ -114,10 +113,6 @@ const Add = ({token}) => {
         <div >
             <p className='mb-2'>Product Price</p>
             <input onChange={(e)=>setPrice(e.target.value)} value={price} type="Number" placeholder='₹100' className="w-full px-3 py-2 sm:w-[120px]" />
-        </div>
-        <div >
-            <p className='mb-2'>Stocks</p>
-          <input onChange={(e) => setStock(e.target.value)} value={stock} type="Number" placeholder='Stocks' className="w-full px-3 py-2 sm:w-[120px]" />
         </div>
       </div>
       <div>
