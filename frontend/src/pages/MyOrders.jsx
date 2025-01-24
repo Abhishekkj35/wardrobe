@@ -2,6 +2,7 @@ import React,{useContext,useState,useEffect} from 'react'
 import Title from '../components/Title'
 import { ShopContext } from '../context/ShopContext'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const MyOrders = () => {
   const {backendUrl,token, currency } = useContext(ShopContext);
